@@ -56,7 +56,7 @@ p{
     max-height: 38rem;
 }
 
-img{
+.image-container img{
    width: 100%;
    min-width: 15rem;
    height: 100%;
@@ -84,6 +84,12 @@ button{
     border-radius: var(--radius);
     padding: 1rem 0;
     font-family: var(--Montserrat);
+    display: flex;
+    justify-content: center;
+}
+
+button>img{
+    margin-right: .5rem;
 }
 
 
@@ -130,15 +136,21 @@ span{
 @media screen and (min-width:780px){
     .container{
         flex-direction: row; 
+        max-height: 25rem;
     }
+
     .contents{
         padding: 3rem;
        justify-content: center;
     }
+
     h2{
         max-width: 10rem;
     }
     .details{
-        gap: 2rem;
+        gap: 1rem;
+    }
+    .price-cart{
+        gap: 1.3rem;
     }
 }
