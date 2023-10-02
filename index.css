@@ -20,20 +20,25 @@
     --Very-dark-blue: hsl(212, 21%, 14%);
     --Dark-grayish-blue: hsl(228, 12%, 48%);
     --White: hsl(0, 0%, 100%);
+    --radius:  10px;
+    --Montserrat: 'Montserrat', sans-serif;
+    --Fraunces: 'Fraunces', serif;
 }
+
 body{
-    min-height: 100vh;
+    min-height: 100%;
     width: 100%;
     min-width: 375px;
-    position: relative;
     background-color: var(--Cream);
 }
 
 p{
     font-size: 0.875rem;
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--Montserrat);
     max-width: 18.5rem;
+    min-width: 15rem;
     color: var(--Dark-grayish-blue);
+    line-height: 1.3rem;
 }
 
 .container{
@@ -41,4 +46,99 @@ p{
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
+    border-radius: var(--radius);
+    background-color: var(--White);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    max-width: 50rem;
+    min-width: 21rem;
+    max-height: 38rem;
+}
+
+img{
+   width: 100%;
+   min-width: 15rem;
+   height: 100%;
+   object-fit: cover;
+}
+
+.contents{
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.price-cart{
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+}
+
+
+button{
+    background-color: var(--Dark-cyan);
+    color: var(--White);
+    border: none;
+    border-radius: var(--radius);
+    padding: 1rem 0;
+    font-family: var(--Montserrat);
+}
+
+
+h2{
+    max-width: 15rem;
+    font-family: var(--Fraunces);
+    color: var(--Very-dark-blue);
+    line-height: 1.7rem;
+}
+
+h3{
+    font-family: var(--Montserrat);
+    text-transform: uppercase;
+    font-weight: lighter;
+    color: var(--Dark-grayish-blue);
+    font-size: .9rem;
+    letter-spacing: .3rem;
+}
+.details{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.cost{
+    display: flex;
+    align-items: center;
+}
+
+
+span{
+    font-size: 2rem;
+    font-family: var(--Fraunces);
+    color: var(--Dark-cyan);
+}
+
+.strike{
+    margin-left: 1rem;
+    font-family: var(--Montserrat);
+    color: var(--Dark-grayish-blue);
+}
+
+
+@media screen and (min-width:780px){
+    .container{
+        flex-direction: row; 
+    }
+    .contents{
+        padding: 3rem;
+       justify-content: center;
+    }
+    h2{
+        max-width: 10rem;
+    }
+    .details{
+        gap: 2rem;
+    }
 }
